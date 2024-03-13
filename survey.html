@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey – Riley Brunn</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="process_form.js" defer></script>
+    </head>
+
+    <body>
+    <div id="sidebar"></div>
+
+        <header class="center">
+            <h1>Geography Quiz</h1>
+        </header>
+
+    <div id="first-page">
+        <form>
+            <fieldset class="section">
+                <legend class="center">Personal Information</legend>
+                <label for="first" class="infolab">First Name:</label>
+                <input type="text" id="first" class="txt-fields" name="first" required><span id="one" class="hint"></span><br>
+                <label for="last" class="infolab">Last Name:</label>
+                <input type="text" id="last" class="txt-fields" name="last" required><span id="two" class="hint"></span><br>
+                <label for="phone" class="infolab">Phone Number:</label>
+                <input type="text" id="phone" class="txt-fields" name="phone" required><span id="three" class="hint"></span><br>
+                <label for="email" class="infolab">Email Address:</label>
+                <input type="text" id="email" class="txt-fields" name="email" required><span id="four" class="hint"></span><br>
+                <label for="url" class="infolab">Website URL:</label>
+                <input type="text" id="url" class="txt-fields" name="url" required><span id="five" class="hint"></span><br>
+            </fieldset>
+
+            <fieldset class="section">
+                <legend class="center">Survey Questions</legend>
+                <p>Which continent is Brazil in?</p>
+                <input type="radio" id="na" name="q1">
+                <label for="na">North America</label><br>
+                <input type="radio" id="sa" name="q1">
+                <label for="sa">South America</label><br>
+                <input type="radio" id="eu" name="q1">
+                <label for="eu">Europe</label><br>
+                <input type="radio" id="af" name="q1">
+                <label for="af">Africa</label><br>
+
+                <p id="q2">Which is considered a Baltic country?</p>
+                <input type="radio" id="vi" name="q2">
+                <label for="vi">Vietnam</label><br>
+                <input type="radio" id="dn" name="q2">
+                <label for="dn">Denmark</label><br>
+                <input type="radio" id="bl" name="q2">
+                <label for="bl">Belarus</label><br>
+                <input type="radio" id="li" name="q2">
+                <label for="li">Lithuania</label>
+            </fieldset>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="second-page">
+        <div id="text-content">
+            Name: <span id="output-name" class="containers"></span><br>
+            Phone: <span id="output-phone" class="containers"></span><br>
+            Email: <span id="output-email" class="containers"></span><br>
+            Website URL: <span id="output-url" class="containers"></span><br>
+            Correct Answers: <span id="answers" class="containers"></span>
+        </div>
+
+        <img src="" alt="" id="badge">
+        <!-- <a href=""></a> -->
+    </div>
+
+    <!-- <footer class="center">
+        <p>Created for DIG 3716c by Riley Brunn</p>
+    </footer> -->
+    </body>
+</html>
