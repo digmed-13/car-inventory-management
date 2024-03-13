@@ -1,2 +1,2 @@
-# car-inventory-management
-Simple site with sorting and totaling functionality
+# geography quiz
+Simple site with form and quiz
