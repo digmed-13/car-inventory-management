@@ -44,7 +44,7 @@ function offerHint(e) {
         case 'url':
             let span5 = document.querySelector('#five');
             hints.push(span5);
-            let fifthHint = document.createTextNode('Use only one "~" and trailing "/"; begin with "https://"');
+            let fifthHint = document.createTextNode('Must begin with "https://"');
             span5.appendChild(fifthHint);
             break;
     }
@@ -66,7 +66,7 @@ const firstRE = /^[A-Z][a-z]+$/;
 const lastRE = /^[A-Z][a-z\s']+$/;
 const phoneRE = /^\d{3}\s\d{3}-\d{4}$/;
 const emailRE = /^[\w.]+@\w+.\w{2,4}$/;
-const urlRE = /^https:\/\/students.gaim.ucf.edu\/~[a-z]+\/$/;
+const urlRE = /^https:\/\/[a-z]+$/;
 
 
 function validateData(e) {
