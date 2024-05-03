@@ -66,7 +66,7 @@ const firstRE = /^[A-Z][a-z]+$/;
 const lastRE = /^[A-Z][a-z\s']+$/;
 const phoneRE = /^\d{3}\s\d{3}-\d{4}$/;
 const emailRE = /^[\w.]+@\w+.\w{2,4}$/;
-const urlRE = /^https:\/\/[a-z]+$/;
+const urlRE = /^(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}$/;
 
 
 function validateData(e) {
