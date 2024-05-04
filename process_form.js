@@ -41,12 +41,12 @@ function offerHint(e) {
             let fourthHint = document.createTextNode('Use only one "@" and at least 1 "."');
             span4.appendChild(fourthHint);
             break;
-        case 'url':
-            let span5 = document.querySelector('#five');
-            hints.push(span5);
-            let fifthHint = document.createTextNode('Must begin with "https://"');
-            span5.appendChild(fifthHint);
-            break;
+        // case 'url':
+        //     let span5 = document.querySelector('#five');
+        //     hints.push(span5);
+        //     let fifthHint = document.createTextNode('Must begin with "https://"');
+        //     span5.appendChild(fifthHint);
+        //     break;
     }
 }
 
@@ -60,13 +60,13 @@ const input1 = document.querySelector('#first');
 const input2 = document.querySelector('#last');
 const input3 = document.querySelector('#phone');
 const input4 = document.querySelector('#email');
-const input5 = document.querySelector('#url');
+// const input5 = document.querySelector('#url');
 
 const firstRE = /^[A-Z][a-z]+$/;
 const lastRE = /^[A-Z][a-z\s']+$/;
 const phoneRE = /^\d{3}\s\d{3}-\d{4}$/;
 const emailRE = /^[\w.]+@\w+.\w{2,4}$/;
-const urlRE = /^(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}$/;
+// const urlRE = /^(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}$/;
 
 
 function validateData(e) {
@@ -76,7 +76,7 @@ function validateData(e) {
     const lastValue = input2.value;
     const phoneValue = input3.value;
     const emailValue = input4.value;
-    const urlValue = input5.value;
+    // const urlValue = input5.value;
 
     if (target == input1) {
         if (firstValue.match(firstRE)) {
@@ -118,15 +118,15 @@ function validateData(e) {
         }
     }
 
-    if (target == input5) {
-        if (urlValue.match(urlRE)) {
-            document.querySelector('#five').innerText = '✓ ';
-        } else if (urlValue === '') {
-            document.querySelector('#five').innerText = '✗ Invalid. ';
-        } else {
-            document.querySelector('#five').innerText = '✗ Invalid. ';
-        }
-    }
+    // if (target == input5) {
+    //     if (urlValue.match(urlRE)) {
+    //         document.querySelector('#five').innerText = '✓ ';
+    //     } else if (urlValue === '') {
+    //         document.querySelector('#five').innerText = '✗ Invalid. ';
+    //     } else {
+    //         document.querySelector('#five').innerText = '✗ Invalid. ';
+    //     }
+    // }
 }
 
 
@@ -149,12 +149,12 @@ function submitData(e) {
     let outputName = input1.value + ' ' + input2.value;
     let outputPhone = input3.value;
     let outputEmail = input4.value;
-    let outputUrl = input5.value;
+    // let outputUrl = input5.value;
 
     let firstOut = document.querySelector('#output-name').innerText = outputName;
     let secondOut = document.querySelector('#output-phone').innerText = outputPhone;
     let thirdOut = document.querySelector('#output-email').innerText = outputEmail;
-    let fourthOut = document.querySelector('#output-url').innerText = outputUrl;
+    // let fourthOut = document.querySelector('#output-url').innerText = outputUrl;
 
     let answers = document.querySelector('#answers').innerText = correctAnswers;
 
